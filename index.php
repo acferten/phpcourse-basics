@@ -204,5 +204,38 @@ echo $n;
 echo "\n" . strrev($n);
 ?>
 
+<?php
 
+//напишите функцию, принимающую на вход 2 аргумента - массив и какое-либо значение. Функция возвращает true, если переданное значение присутствует в массиве и false - если нет.
+//напишите функцию, принимающую на вход 2 аргумента - массив и какое-либо значение. Функция возвращает число вхождений числа в массив. Например: для массива [1, 2, 1, 3] число вхождений числа "1" будет равно двум.
+
+function isIncluded(array $arr, int $n)
+{
+    foreach ($arr as $element) {
+        if ($element === $n) {
+            return true;
+        }
+    }
+    return false;
+}
+
+function countAmount(array $arr, int $n)
+{
+    $counter = 0;
+    foreach ($arr as $element) {
+        if ($element === $n) {
+            $counter++;
+        }
+    }
+    return $counter;
+}
+
+$n = 5;
+$A = [1, 5, 5, 5, 7, 8, 5, 9, 0];
+
+echo "-- элемент $n в массиве    " . var_dump(isIncluded($A, $n));
+echo "-- количество элемента $n в массиве" . var_dump(countAmount($A, $n));
+
+
+?>
 
