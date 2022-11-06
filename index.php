@@ -162,3 +162,19 @@ $article['author']['address']['house'] = '11'
 <p><?= $article['author']['address']['house'] ?></p>
 </body>
 </html>
+
+<?php
+// Придумайте способ обойтись без использования функции count.
+
+$carsSpeeds = [
+    95,
+    140,
+    78
+];
+
+$countOfCars = 0;
+
+foreach ($carsSpeeds as $speed) {
+    $countOfCars++;
+}
+echo $countOfCars;
