@@ -110,3 +110,24 @@ multiTo2($c, $v);
 echo ' // Умножение на 2: ' . $c . '--' . $v;
 numbers(5);
 ?>
+
+<!--// Самостоятельно создайте архитектуру, описанную в статье: сделайте шапку, сайдбар, контент и футер в отдельных файлах.-->
+<!--// Сделайте минимум 4 переменные для каждого из этих блоков в файле index.php и выведете их внутри этих файлов.-->
+<!--// Изучите официальную документацию по include и изучите как можно использовать выражения вида-->
+<!---->
+<!--// $var = include 'file.php'-->
+
+<?php
+
+$header = '<p>HeaDER</p>';
+$sidebar = '<p>SIdeBAR</p>';
+$content = '<p>CONTeNT</p>';
+$footer = '<p>fOoTER</p>';
+
+$file = include 'file.php';
+
+echo $file;
+require __DIR__ . '/header.php';
+require __DIR__ . '/sidebar.php';
+require __DIR__ . '/content.php';
+require __DIR__ . '/footer.php';
