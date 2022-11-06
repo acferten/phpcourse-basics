@@ -1,14 +1,11 @@
 <?php
 
-$carsSpeeds = [
-    95,
-    140,
-    78
-];
+$n = 345;
 
-$countOfCars = 0;
-
-foreach ($carsSpeeds as $speed) {
-    $countOfCars++;
+while ($n < 357) {
+    if ($n % 2 == 0) {
+        $array[] = $n;
+    }
+    $n++;
 }
-echo $countOfCars;
+var_dump($array);
