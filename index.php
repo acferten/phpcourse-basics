@@ -1,29 +1,13 @@
 <?php
+$array = [1, 3, 2];
+asort($array);
+$s = implode(":", $array);
+echo $s . ' // ';
 
-function isIncluded(array $arr, int $n)
-{
-    foreach ($arr as $element) {
-        if ($element === $n) {
-            return true;
-        }
-    }
-    return false;
-}
+$array = [1, 2, 3, 4, 5];
+var_dump(array_slice($array, 1, 3));
 
-function countAmount(array $arr, int $n)
-{
-    $counter = 0;
-    foreach ($arr as $element) {
-        if ($element === $n) {
-            $counter++;
-        }
-    }
-    return $counter;
-}
+echo ' // ';
 
-$n = 5;
-$A = [1, 5, 5, 5, 7, 8, 5, 9, 0];
-
-echo "-- элемент $n в массиве    " . var_dump(isIncluded($A, $n));
-echo "-- количество элемента $n в массиве" . var_dump(countAmount($A, $n));
-
+$array = [0, 2, 3, 1, 2];
+var_dump(array_unique($array));
