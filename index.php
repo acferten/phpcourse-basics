@@ -1,28 +1,14 @@
 <?php
-$article = [
-    'title' => 'Название статьи',
-    'text' => 'Текст статьи',
-    'author' => [
-        'first_name' => 'Иван',
-        'last_name' => 'Иванов',
-        'address' => [
-            'street' => 'Ленина',
-            'city' => 'Томск'
-        ]
-    ]
+
+$carsSpeeds = [
+    95,
+    140,
+    78
 ];
 
-$article['author']['address']['house'] = '11'
+$countOfCars = 0;
 
-?>
-<html>
-<head>
-    <title><?= $article['title'] ?></title>
-</head>
-<body>
-<h1><?= $article['title'] ?></h1>
-<p><?= $article['text'] ?></p>
-<p><?= $article['author']['first_name'] . ' ' . $article['author']['last_name'] ?></p>
-<p><?= $article['author']['address']['house'] ?></p>
-</body>
-</html>
+foreach ($carsSpeeds as $speed) {
+    $countOfCars++;
+}
+echo $countOfCars;
