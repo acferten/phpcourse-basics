@@ -1,14 +1,28 @@
 <?php
+$article = [
+    'title' => 'Название статьи',
+    'text' => 'Текст статьи',
+    'author' => [
+        'first_name' => 'Иван',
+        'last_name' => 'Иванов',
+        'address' => [
+            'street' => 'Ленина',
+            'city' => 'Томск'
+        ]
+    ]
+];
 
-$header = '<p>HeaDER</p>';
-$sidebar = '<p>SIdeBAR</p>';
-$content = '<p>CONTeNT</p>';
-$footer = '<p>fOoTER</p>';
+$article['author']['address']['house'] = '11'
 
-$file = include 'file.php';
-
-echo $file;
-require __DIR__ . '/header.php';
-require __DIR__ . '/sidebar.php';
-require __DIR__ . '/content.php';
-require __DIR__ . '/footer.php';
+?>
+<html>
+<head>
+    <title><?= $article['title'] ?></title>
+</head>
+<body>
+<h1><?= $article['title'] ?></h1>
+<p><?= $article['text'] ?></p>
+<p><?= $article['author']['first_name'] . ' ' . $article['author']['last_name'] ?></p>
+<p><?= $article['author']['address']['house'] ?></p>
+</body>
+</html>
