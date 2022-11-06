@@ -1,33 +1,14 @@
 <?php
-function minimalNumber(float $a, float $b, float $c)
-{
-    return min($a, $b, $c);
-}
 
-function multiTo2(&$x, &$y)
-{
-    $x *= 2;
-    $y *= 2;
-}
+$header = '<p>HeaDER</p>';
+$sidebar = '<p>SIdeBAR</p>';
+$content = '<p>CONTeNT</p>';
+$footer = '<p>fOoTER</p>';
 
-function numbers($a)
-{
-    if ($a == 0) {
-        echo ' // Числа от 0 до n ' . 0;
-        return 0;
-    }
-    numbers($a - 1);
-    echo ', ' . $a;
-}
+$file = include 'file.php';
 
-$x = 13.97;
-$c = 5.5;
-$v = 8.5;
-
-
-echo 'Минимальное число: ' . minimalNumber($x, $c, $v);
-multiTo2($c, $v);
-echo ' // Умножение на 2: ' . $c . '--' . $v;
-numbers(5)
-
-?>
+echo $file;
+require __DIR__ . '/header.php';
+require __DIR__ . '/sidebar.php';
+require __DIR__ . '/content.php';
+require __DIR__ . '/footer.php';
