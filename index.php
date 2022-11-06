@@ -193,6 +193,16 @@ while ($n < 357) {
 var_dump($array);
 ?>
 
+<?php
+// Перевести строку в uppercase
+
+$n = strtoupper('oneoneone');
+echo $n;
+
+//Вывести строку в обратную сторону
+
+echo "\n" . strrev($n);
+?>
 
 
 
