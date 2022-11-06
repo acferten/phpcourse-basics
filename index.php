@@ -179,6 +179,19 @@ foreach ($carsSpeeds as $speed) {
 }
 echo $countOfCars;
 ?>
+<?php
+//С помощью цикла while создайте массив, содержащий чётные числа от 345
+
+$n = 345;
+
+while ($n < 357) {
+    if ($n % 2 == 0) {
+        $array[] = $n;
+    }
+    $n++;
+}
+var_dump($array);
+?>
 
 
 
