@@ -1,11 +1,7 @@
 <?php
 
-$n = 345;
+$n = strtoupper('oneoneone');
 
-while ($n < 357) {
-    if ($n % 2 == 0) {
-        $array[] = $n;
-    }
-    $n++;
-}
-var_dump($array);
+echo $n;
+
+echo "\n" . strrev($n);
