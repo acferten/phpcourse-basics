@@ -3,16 +3,13 @@
     <title>Форма входа</title>
 </head>
 <body>
-<form action="/login.php" method="get">
+<form action="/code.php" method="get">
     <label>
-        Логин <input type="text" name="login">
+        Числа <input type="text" name="numbers">
     </label>
     <br>
-    <label>
-        Пароль <input type="password" name="password">
-    </label>
     <br>
-    <input type="submit" value="Войти">
+    <input type="submit" value="OK">
 </form>
 </body>
 </html>
