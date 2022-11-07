@@ -1,5 +1,18 @@
 <?php
-setcookie('login', 'admin', time()+20, '/');
-echo 'Cookie установлены';
-print_r($_COOKIE);
+require __DIR__ . '/auth.php';
+$login = getUserLogin();
 ?>
+<html>
+<head>
+    <title>Главная страница</title>
+</head>
+<body>
+<?php if ($login === null): ?>
+    <a href="/login.php">Авторизуйтесь</a>
+<?php else: ?>
+    Добро пожаловать, <?= $login ?>
+    <br>
+    <a href="/logout.php">Выйти</a>
+<?php endif; ?>
+</body>
+</html>
