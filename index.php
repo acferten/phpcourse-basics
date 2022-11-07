@@ -327,9 +327,17 @@ foreach ($values as $num) {
     }
 }
 echo '  //  Переместите все нули в конец строки: ' . implode(" ", $values);
-
-
 ?>
-
 </body>
 </html>
+
+
+<!-- Куки 22 -->
+
+<?php
+setcookie('login', 'admin', time()+20, '/');
+echo 'Cookie установлены';
+print_r($_COOKIE);
+?>
+
+
