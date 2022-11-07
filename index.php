@@ -255,3 +255,24 @@ echo ' // ';
 $array = [0, 2, 3, 1, 2];
 var_dump(array_unique($array));
 ?>
+
+// форма входа 19 урок
+
+<html>
+<head>
+    <title>Форма входа</title>
+</head>
+<body>
+<form action="/login.php" method="get">
+    <label>
+        Логин <input type="text" name="login">
+    </label>
+    <br>
+    <label>
+        Пароль <input type="password" name="password">
+    </label>
+    <br>
+    <input type="submit" value="Войти">
+</form>
+</body>
+</html>
