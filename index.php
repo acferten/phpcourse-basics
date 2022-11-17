@@ -178,3 +178,8 @@ foreach ($carsSpeeds as $speed) {
     $countOfCars++;
 }
 echo $countOfCars;
+?>
+
+
+
+
